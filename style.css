@@ -1,0 +1,165 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* サイト全体の基本設定 */
+body {
+  background-color:#111115;
+  color: #e4d8c6;
+  font-family: 'Noto Serif JP', serif;
+  margin: 0;
+  letter-spacing: 1.5px; /* 文字の間隔をさらに広げてゆったりと */
+  line-height: 1.8; /* 行と行の隙間を広げる */
+}
+
+/* お店の看板デザイン */
+.header {
+  background-color: transparent;
+  color: #d9b876;
+  text-align: center;
+  padding: 80px 20px 50px; /* 上下の余白を増やして優雅に */
+  border-bottom: 1px solid rgba(217, 184, 118, 0.3);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: 6px; /* タイトルの文字間隔を大きく */
+}
+
+.header p {
+  font-size: 14px;
+  color: #a49e94;
+  margin-top: 20px;
+}
+
+/* 枠組みのデザイン（特徴・メニュー・店舗情報） */
+.feature-box, .menu-box, .info-box {
+  background-color: #1a1a20;
+  width: 80%;
+  max-width: 600px;
+  margin: 60px auto; /* 箱と箱の間のスキマを広げる */
+  padding: 50px; /* 箱の内側のスキマを広げる */
+  border: 1px solid rgba(217, 184, 118, 0.2);
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 各箱の「見出し」デザイン */
+h2 {
+  color: #d9b876;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(217, 184, 118, 0.3);
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 40px; /* 見出しの下のスキマを広げる */
+  letter-spacing: 3px;
+}
+
+/* 各メニューの並び */
+.item {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 30px; /* メニュー同士のスキマを広げる */
+  border-bottom: 1px dotted rgba(228, 216, 198, 0.2);
+  padding-bottom: 20px;
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.item h3 {
+  margin: 0 0 10px 0;
+  color: #e4d8c6;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.item p {
+  margin: 0;
+  font-size: 13px;
+  color: #a49e94;
+}
+
+/* 店舗情報の文字 */
+.info-box p {
+  text-align: center; /* 住所などを中央揃えにして美しく */
+  margin-bottom: 15px;
+}
+
+/* 🚀 ボタンを横に並べるための設定（新規追加） */
+.btn-group {
+  display: flex; /* 中身を横並びにする魔法の指示 */
+  justify-content: center; /* 中央に寄せる */
+  gap: 20px; /* ボタンとボタンの隙間 */
+  margin-top: 40px;
+}
+
+/* ボタンのデザイン（共通） */
+.btn {
+  display: block;
+  width: 180px; /* ボタンの横幅を同じサイズに統一 */
+  background-color: transparent;
+  color: #d9b876;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 0;
+  border: 1px solid #d9b876;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.btn:hover {
+  background-color: #d9b876;
+  color: #111115;
+  box-shadow: 0 0 15px rgba(217, 184, 118, 0.3);
+}
+
+/* 一番下のフッターデザイン */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 12px;
+  color: #666666;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  
+  /* 1. ヘッダーの文字と余白をスマホサイズに微調整 */
+  .header {
+    padding: 50px 15px 30px;
+  }
+  .header h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  /* 2. 枠組み（メニューや店舗情報）の幅と余白をスマホ最適化 */
+  .feature-box, .menu-box, .info-box {
+    width: 90%;         /* 画面幅に合わせて少し広げる */
+    padding: 30px 20px; /* 余白を狭くして画面からはみ出るのを防ぐ */
+    margin: 30px auto;  /* 上下の間隔を詰める */
+  }
+
+  /* 3. ボタンを縦並びに変更して押しやすくする */
+  .btn-group {
+    flex-direction: column; /* 横並びから「縦並び」に変更 */
+    align-items: center;   /* 中央に揃える */
+    gap: 15px;             /* ボタン同士の上下の隙間 */
+  }
+
+  .btn {
+    width: 100%;          /* スマホの横幅いっぱいに使う */
+    max-width: 240px;     /* 大きくなりすぎないように上限を指定 */
+  }
+}
