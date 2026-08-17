@@ -197,3 +197,21 @@ h2 {
   }
 
 }
+/* ヘッダーの中にあるMenuリンクのデザイン */
+.nav-link {
+  margin-top: 20px;
+}
+
+.nav-link a {
+  color: #d9b876; /* 上品なゴールド */
+  text-decoration: none; /* 下線を消す */
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+/* マウスを乗せたときに下線がフワッと浮かび上がる */
+.nav-link a:hover {
+  border-bottom: 1px solid #d9b876;
+}
