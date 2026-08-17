@@ -197,18 +197,27 @@ h2 {
   }
 
 }
-/* ヘッダーの中にあるMenuリンクのデザイン */
+/* ヘッダーの中にあるナビゲーション全体の設定 */
 .nav-link {
   margin-top: 20px;
+  display: flex;         /* 横並びにする */
+  justify-content: center; /* 中央に寄せる */
+  gap: 30px;             /* HomeとMenuの間の隙間 */
 }
 
+/* リンクのデザイン */
 .nav-link a {
-  color: #d9b876; /* 上品なゴールド */
-  text-decoration: none; /* 下線を消す */
+  color: #d9b876;
+  text-decoration: none;
   font-size: 14px;
   letter-spacing: 2px;
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.3s ease;
+}
+
+/* マウスを乗せたときに下線が浮かび上がる */
+.nav-link a:hover {
+  border-bottom: 1px solid #d9b876;
 }
 
 /* マウスを乗せたときに下線がフワッと浮かび上がる */
